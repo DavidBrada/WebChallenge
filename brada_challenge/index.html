@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Fylo data storage component</title>
+
+</head>
+<body onload="updateStorage()">
+<script src="script.js"></script>
+<div class="body-bg-image">
+  <img src="images/bg-desktop.png" alt="background image">
+</div>
+
+  <div class="main-section">
+    <div class="container-left">
+      <div class="logo">
+        <img src="images/logo.svg" alt="Fylo data storage component logo">
+      </div>
+
+      <div class="buttons">
+        <button type="button" style="background-image: url(images/icon-document.svg)" onclick="updateStorage()"></button>
+        <button type="button" style="background-image: url(images/icon-folder.svg)" onclick="emptyStorage()"></button>
+        <button type="button" style="background-image: url(images/icon-upload.svg)" onclick="updateStorage()"></button>
+      </div>
+    </div>
+    <div class="container-right">
+      <div class="text-container">
+        <p>You've used <strong><span id="sliderVal"></span> GB</strong> of your storage</p>
+      </div>
+      <div class="slider-container">
+        <input type="range" id="rangeSlider" value="0" min="0" max="1000" class="slider">
+      </div>
+      <div class="slider-description">
+        <div class="slider-description-left">
+          <p>0 GB</p>
+        </div>
+        <div class="slider-description-right">
+          <p>1000 GB</p>
+      </div>
+    </div>
+    </div>
+
+    <div class="bubble">
+      <h2><span id="bubble-text"></span> <span style=" font-size: small; color: gray; text-transform: capitalize">GB Left</span></h2>
+    </div>
+
+  </div>
+</body>
+</html>
